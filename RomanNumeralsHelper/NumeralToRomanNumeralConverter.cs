@@ -1,18 +1,13 @@
 ﻿namespace RomanNumeralsHelper
 {
-    public class NumeralToRomanNumeralConverter: IConverter
+    public class NumeralToRomanNumeralConverter
     {
-        private readonly Dictionary<string, int> romanNumeralAlphabet = new Dictionary<string, int>
+        public static string Convert(int n)
         {
-            { "M", 1000 }, { "D", 500 }, { "C", 100 }, { "L", 50 }, { "X", 10 }, { "IX", 9 }, { "VIII", 8 }, { "VII", 7 }, { "VI", 6 }, { "V", 5 },
-            { "IV", 4 },{ "III", 3 },{ "II", 2 },{ "I", 1 }
-        };
-
-        public string Convert(int n)
-        {
+    
             var romanNumeralString = "";
 
-            foreach(var liter in romanNumeralAlphabet)
+            foreach(var liter in RomanNumeralAlphabet.romanNumeralAlphabet)
             {
                 romanNumeralString += PickOutOneRomanNumber(n, liter.Value, liter.Key);
                 n %= liter.Value;

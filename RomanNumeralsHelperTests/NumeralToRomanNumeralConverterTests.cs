@@ -8,7 +8,7 @@ namespace RomanNumeralsHelperTests
             var number = 3000;
             var expected = "MMM";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -19,7 +19,7 @@ namespace RomanNumeralsHelperTests
             var number = 1000;
             var expected = "M";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -30,7 +30,8 @@ namespace RomanNumeralsHelperTests
             var number = 500;
             var expected = "D";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
+
 
             Assert.Equal(expected, actual);
         }
@@ -41,7 +42,7 @@ namespace RomanNumeralsHelperTests
             var number = 100;
             var expected = "C";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -52,7 +53,7 @@ namespace RomanNumeralsHelperTests
             var number = 50;
             var expected = "L";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -63,7 +64,7 @@ namespace RomanNumeralsHelperTests
             var number = 10;
             var expected = "X";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -74,7 +75,7 @@ namespace RomanNumeralsHelperTests
             var number = 9;
             var expected = "IX";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -85,7 +86,7 @@ namespace RomanNumeralsHelperTests
             var number = 8;
             var expected = "VIII";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -96,7 +97,7 @@ namespace RomanNumeralsHelperTests
             var number = 7;
             var expected = "VII";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -107,7 +108,7 @@ namespace RomanNumeralsHelperTests
             var number = 6;
             var expected = "VI";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -118,7 +119,7 @@ namespace RomanNumeralsHelperTests
             var number = 5;
             var expected = "V";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -129,7 +130,7 @@ namespace RomanNumeralsHelperTests
             var number = 4;
             var expected = "IV";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -140,7 +141,7 @@ namespace RomanNumeralsHelperTests
             var number = 3;
             var expected = "III";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -151,7 +152,7 @@ namespace RomanNumeralsHelperTests
             var number = 2;
             var expected = "II";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -162,7 +163,7 @@ namespace RomanNumeralsHelperTests
             var number = 1;
             var expected = "I";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
@@ -173,7 +174,29 @@ namespace RomanNumeralsHelperTests
             var number = 1666;
             var expected = "MDCLXVI";
 
-            var actual = new NumeralToRomanNumeralConverter().Convert(number);
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Convert_400_CD()
+        {
+            var number = 400;
+            var expected = "CD";
+
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void Convert_44_XLIV()
+        {
+            var number = 44;
+            var expected = "XLIV";
+
+            var actual = NumeralToRomanNumeralConverter.Convert(number);
 
             Assert.Equal(expected, actual);
         }
